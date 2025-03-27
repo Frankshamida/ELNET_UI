@@ -1,0 +1,139 @@
+﻿<!-- Pages/FrontDesk/Dashboard.cshtml -->
+
+@model RETRA_Hotel_Management_System_UI.Pages.FrontDesk.DashboardModel
+
+@{
+    ViewData["Title"] = "Front Desk Dashboard";
+    Layout = "_Layout";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                    <span>Front Desk</span>
+                </h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Check-In
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Check-Out
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Reservations
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Guest Services
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Front Desk Dashboard</h1>
+                <div class="btn-toolbar mb-2 mb-md-0">
+                    <button type="button" class="btn btn-sm btn-outline-primary">
+                        New Reservation
+                    </button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card text-white bg-primary mb-3">
+                        <div class="card-header">Arrivals Today</div>
+                        <div class="card-body">
+                            <h5 class="card-title">12</h5>
+                            <p class="card-text">Guests arriving today</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white bg-success mb-3">
+                        <div class="card-header">Departures Today</div>
+                        <div class="card-body">
+                            <h5 class="card-title">8</h5>
+                            <p class="card-text">Guests departing today</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white bg-warning mb-3">
+                        <div class="card-header">In House</div>
+                        <div class="card-body">
+                            <h5 class="card-title">85</h5>
+                            <p class="card-text">Current guests</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white bg-danger mb-3">
+                        <div class="card-header">VIP Guests</div>
+                        <div class="card-body">
+                            <h5 class="card-title">5</h5>
+                            <p class="card-text">VIP guests in house</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Today's Arrivals</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-sm">
+                    <thead>
+                        <tr>
+                            <th>Reservation #</th>
+                            <th>Guest Name</th>
+                            <th>Room</th>
+                            <th>Arrival Time</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>RES-1001</td>
+                            <td>John Smith</td>
+                            <td>Deluxe Room (205)</td>
+                            <td>2:00 PM</td>
+                            <td><span class="badge badge-warning">Pending</span></td>
+                            <td><button class="btn btn-sm btn-primary">Check-In</button></td>
+                        </tr>
+                        <tr>
+                            <td>RES-1002</td>
+                            <td>Sarah Johnson</td>
+                            <td>Suite (301)</td>
+                            <td>3:00 PM</td>
+                            <td><span class="badge badge-warning">Pending</span></td>
+                            <td><button class="btn btn-sm btn-primary">Check-In</button></td>
+                        </tr>
+                        <tr>
+                            <td>RES-1003</td>
+                            <td>Michael Brown</td>
+                            <td>Standard Room (102)</td>
+                            <td>12:00 PM</td>
+                            <td><span class="badge badge-success">Checked-In</span></td>
+                            <td><button class="btn btn-sm btn-secondary" disabled>Done</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</div>

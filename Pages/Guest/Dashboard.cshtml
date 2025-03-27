@@ -1,0 +1,131 @@
+﻿<!-- Pages/Guest/Dashboard.cshtml -->
+
+@model RETRA_Hotel_Management_System_UI.Pages.Guest.DashboardModel
+
+@{
+    ViewData["Title"] = "Guest Dashboard";
+    Layout = "_Layout";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">My Profile</h5>
+                </div>
+                <div class="card-body">
+                    <div class="text-center mb-3">
+                        <img src="https://via.placeholder.com/150" class="rounded-circle" alt="Profile Image">
+                    </div>
+                    <h6 class="text-center">Welcome, Guest!</h6>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="#">My Bookings</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">My Preferences</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">Payment Methods</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Guest Dashboard</h5>
+                </div>
+                <div class="card-body">
+                    <h4>Upcoming Reservations</h4>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Reservation #</th>
+                                    <th>Room Type</th>
+                                    <th>Check-In</th>
+                                    <th>Check-Out</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>RES-2001</td>
+                                    <td>Deluxe Room</td>
+                                    <td>2023-06-15</td>
+                                    <td>2023-06-20</td>
+                                    <td><span class="badge badge-success">Confirmed</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary">Details</button>
+                                        <button class="btn btn-sm btn-danger">Cancel</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>RES-2002</td>
+                                    <td>Standard Room</td>
+                                    <td>2023-07-10</td>
+                                    <td>2023-07-15</td>
+                                    <td><span class="badge badge-warning">Pending</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary">Details</button>
+                                        <button class="btn btn-sm btn-danger">Cancel</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Hotel Services</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <a href="#">Room Service</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="#">Spa Booking</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="#">Restaurant Reservation</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="#">Transportation Request</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Special Offers</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="alert alert-info">
+                                        <h6>Summer Special!</h6>
+                                        <p>Book 3 nights and get 1 night free. Valid until August 31.</p>
+                                    </div>
+                                    <div class="alert alert-warning">
+                                        <h6>Spa Package</h6>
+                                        <p>20% off all spa services when booked with your room.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

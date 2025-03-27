@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\RETRA_Hotel_Management_System_UI.props" />
+</Project>

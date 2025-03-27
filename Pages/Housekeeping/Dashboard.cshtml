@@ -1,0 +1,121 @@
+﻿<!-- Pages/Housekeeping/Dashboard.cshtml -->
+
+@model RETRA_Hotel_Management_System_UI.Pages.Housekeeping.DashboardModel
+
+@{
+    ViewData["Title"] = "Housekeeping Dashboard";
+    Layout = "_Layout";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                    <span>Housekeeping</span>
+                </h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Room Status
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Cleaning Schedule
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Maintenance
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Housekeeping Dashboard</h1>
+                <div class="btn-toolbar mb-2 mb-md-0">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                        Refresh
+                    </button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card text-white bg-danger mb-3">
+                        <div class="card-header">Dirty Rooms</div>
+                        <div class="card-body">
+                            <h5 class="card-title">15</h5>
+                            <p class="card-text">Rooms need cleaning</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-white bg-warning mb-3">
+                        <div class="card-header">In Progress</div>
+                        <div class="card-body">
+                            <h5 class="card-title">8</h5>
+                            <p class="card-text">Rooms being cleaned</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-white bg-success mb-3">
+                        <div class="card-header">Cleaned Today</div>
+                        <div class="card-body">
+                            <h5 class="card-title">32</h5>
+                            <p class="card-text">Rooms cleaned today</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Today's Cleaning Schedule</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-sm">
+                    <thead>
+                        <tr>
+                            <th>Room #</th>
+                            <th>Status</th>
+                            <th>Assigned To</th>
+                            <th>Time Started</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>101</td>
+                            <td><span class="badge badge-danger">Dirty</span></td>
+                            <td>You</td>
+                            <td>-</td>
+                            <td><button class="btn btn-sm btn-primary">Start Cleaning</button></td>
+                        </tr>
+                        <tr>
+                            <td>205</td>
+                            <td><span class="badge badge-warning">In Progress</span></td>
+                            <td>John Doe</td>
+                            <td>09:15 AM</td>
+                            <td><button class="btn btn-sm btn-secondary" disabled>In Progress</button></td>
+                        </tr>
+                        <tr>
+                            <td>312</td>
+                            <td><span class="badge badge-success">Clean</span></td>
+                            <td>Jane Smith</td>
+                            <td>08:30 AM</td>
+                            <td><button class="btn btn-sm btn-success" disabled>Completed</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</div>
